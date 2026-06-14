@@ -4,7 +4,7 @@ import {
   Save, Edit3, Github, Mail, Phone, ExternalLink,
   Cpu, MessageSquare, Code, Menu, X, ChevronDown, ChevronUp, Bot, Image as ImageIcon,
   Camera, RotateCcw, Lightbulb, CheckCircle2, ListChecks, TrendingUp, AlertCircle,
-  Target, Compass, LineChart, ArrowRight, ShieldCheck, HelpCircle
+  Target, Compass, LineChart, ArrowRight, CheckSquare, Square
 } from 'lucide-react';
 
 const initialData = {
@@ -73,7 +73,6 @@ const initialData = {
     },
     istp: {
       title: "I'm an ISTP - Introvert, Sensor, Thinker and Perceiver",
-      description: "",
       bullets: [
         "I'm not the first to make decision in a team but an introvert who always make final decision after hearing others' opinions and ideas.",
         "Though I'm an sensor who care about facts and data, I still want to perceive the information first by simpler terms (main ideas).",
@@ -94,36 +93,290 @@ const initialData = {
       title: "Self-Assessment",
       subtitle: "Reflecting on current competencies and developmental opportunities based on personal metrics",
       strengths: [
-        "Natural Under Pressure & Decisive Actor: Stay cool in high-stress debugging scenarios, swiftly resolving urgent hardware bugs and system failures.",
-        "Quickly Adaptable & Sensory Aware: Adjust rapidly to project/prototype adjustments and leverage raw sensory/engineering data to make solid design choices.",
-        "Refreshingly Straightforward & Persuasive: Communicate technical bottlenecks with absolute clarity and align teams using logical reasoning."
+        "Calm Under Pressure: Stays calm during stressful situations and solves problems quickly.",
+        "Learns and Adapts Fast: Adjusts easily to changes and uses available information to make good decisions.",
+        "Clear and Direct Communicator: Explains problems clearly and helps others understand the best solution."
       ],
       weaknesses: [
-        "Struggling with Deadlines: Spontaneous workflow tendencies often lead to rushed, last-minute integration sprints.",
-        "Resistant to Routine & Distracted by Excitement: Easily drained by repetitive coding guidelines or project documentation, preferring novel, thrilling hardware experiments.",
-        "Overlooking Long-Term Goals: Propensity to prioritize rapid physical prototyping wins over systemic architectural planning."
+        "Struggles with Deadlines: Sometimes leaves tasks until the last minute and ends up rushing.",
+        "Gets Bored with Routine Work: Prefers exciting new projects over repetitive tasks or documentation.",
+        "Focuses Too Much on Short-Term Results: Often prioritizes quick progress instead of long-term planning."
       ],
       improvements: [
-        "Apply rigid timeboxing methodologies (e.g., Pomodoro) to structure study schedules and prevent critical last-minute project rushing.",
-        "Establish micro-milestones with quick rewards to maintain momentum during routine documentation and wiring tasks.",
-        "Formulate bi-weekly reviews to align current technical spikes with overall project goals and roadmap architectural plans."
+        "Use Better Time Management: Try methods like the Pomodoro technique to stay organized and avoid last-minute rushing.",
+        "Break Tasks into Small Goals: Set small milestones and reward yourself after completing them to stay motivated.",
+        "Review Progress Regularly: Take time every couple of weeks to check if your current work matches your long-term goals and plans."
       ]
     },
-    pdp: {
-      title: "Personal Development Planning (PDP)",
-      subtitle: "A structured action plan with visual progress tracking",
-      smartObjectives: [
-        { text: "Secure an average GPA of 3.2+ for the upcoming academic year by optimizing time allocation.", progress: 65 },
-        { text: "Engage in at least 2 public speaking opportunities (or project presentations) per semester to build confidence.", progress: 30 }
+    pdpDetailed: {
+      title: "Personal Development Plan (Detailed Version)",
+      name: "Personal Growth Plan",
+      duration: "12 Weeks (June - August)",
+      mainGoal: "Become a more disciplined, organized, and effective engineer/student while maintaining your strengths in problem-solving, adaptability, and communication.",
+      strengths: [
+        {
+          id: "s1",
+          title: "Strength 1: Calm Under Pressure & Decisive Action",
+          situation: "You perform very well when problems occur suddenly. You stay calm and can make decisions quickly. However, this sometimes causes you to rely on pressure rather than preparation.",
+          objective: "By the end of 12 weeks, solve problems proactively instead of waiting until deadlines create pressure.",
+          activities: [
+            {
+              weeks: "Weeks 1-4",
+              bullets: [
+                "Before starting any project, identify: 3 possible risks, 3 backup solutions, 1 emergency plan.",
+                "Spend 10 minutes daily reviewing upcoming tasks."
+              ]
+            },
+            {
+              weeks: "Weeks 5-8",
+              bullets: [
+                "Practice solving one technical problem each week under a self-imposed time limit.",
+                "Record your decision-making process."
+              ]
+            },
+            {
+              weeks: "Weeks 9-12",
+              bullets: [
+                "Lead one project or group task.",
+                "Create a risk-management checklist before starting."
+              ]
+            }
+          ],
+          tracking: [
+            { metric: "Weekly risk reviews", goal: "12" },
+            { metric: "Emergency plans created", goal: "3" },
+            { metric: "Problems solved before becoming urgent", goal: "80%" }
+          ],
+          successIndicators: [
+            { text: "Fewer last-minute crises", completed: true },
+            { text: "Better preparation", completed: true },
+            { text: "Faster decision-making with less stress", completed: true }
+          ]
+        },
+        {
+          id: "s2",
+          title: "Strength 2: Adaptability & Fast Learning",
+          situation: "You learn new technologies quickly and adjust well to changing situations.",
+          objective: "Master one new technical skill and build a project demonstrating it within 12 weeks.",
+          activities: [
+            {
+              weeks: "Weeks 1-2",
+              subtitle: "Choose a learning topic:",
+              bullets: [
+                "Advanced Roblox Scripting",
+                "Python Automation",
+                "Web Development",
+                "Electronics/Arduino",
+                "Data Analysis"
+              ]
+            },
+            {
+              weeks: "Weeks 3-6",
+              subtitle: "Study:",
+              bullets: [
+                "30 minutes daily",
+                "5 days per week",
+                "Create Notes, Small exercises, Mini challenges"
+              ]
+            },
+            {
+              weeks: "Weeks 7-10",
+              subtitle: "Develop a practical project. Examples:",
+              bullets: [
+                "Automation tool",
+                "Roblox game system",
+                "Sensor-based device",
+                "Portfolio website"
+              ]
+            },
+            {
+              weeks: "Weeks 11-12",
+              subtitle: "Document:",
+              bullets: [
+                "Challenges faced",
+                "Lessons learned",
+                "Future improvements"
+              ]
+            }
+          ],
+          tracking: [
+            { metric: "Study hours", goal: "30+" },
+            { metric: "Exercises completed", goal: "20+" },
+            { metric: "Finished project", goal: "1" }
+          ],
+          successIndicators: [
+            { text: "One portfolio-worthy project", completed: true },
+            { text: "New technical skill mastered", completed: true },
+            { text: "Better confidence learning independently", completed: true }
+          ]
+        },
+        {
+          id: "s3",
+          title: "Strength 3: Clear Communication",
+          situation: "You explain technical issues clearly and help others understand problems.",
+          objective: "Improve professional communication skills through regular technical writing and presentations.",
+          activities: [
+            {
+              weeks: "Weekly Plan",
+              subtitle: "Write:",
+              bullets: [
+                "1 technical summary",
+                "1 project update"
+              ],
+              extraSubtitle: "Topics:",
+              extraBullets: [
+                "Physics experiments",
+                "Programming projects",
+                "Engineering concepts"
+              ]
+            },
+            {
+              weeks: "Every Two Weeks Plan",
+              subtitle: "Create:",
+              bullets: [
+                "5-minute presentation",
+                "Explain a technical concept simply"
+              ]
+            }
+          ],
+          tracking: [
+            { metric: "Technical summaries", goal: "12" },
+            { metric: "Presentations", goal: "6" },
+            { metric: "Feedback sessions", goal: "6" }
+          ],
+          successIndicators: [
+            { text: "Better report writing", completed: true },
+            { text: "Stronger presentation skills", completed: true },
+            { text: "Improved teamwork", completed: true }
+          ]
+        }
       ],
-      strategicLearning: [
-        { text: "Learn to manage time effectively.", progress: 50 },
-        { text: "Regularly review modern Presentation and Communication frameworks to improve soft skills.", progress: 25 }
-      ],
-      tracking: [
-        { text: "Conduct a bi-weekly self-review of personal study metrics and project milestones.", progress: 80 },
-        { text: "Actively gather peer and professor feedback after every technical presentation.", progress: 45 },
-        { text: "Continuously push code prototypes to GitHub to build a solid physical developer portfolio.", progress: 90 }
+      weaknesses: [
+        {
+          id: "w1",
+          title: "Weakness 1: Struggling with Deadlines",
+          situation: "You often perform well only when pressure becomes very high.",
+          objective: "Increase on-time completion rate from current level to 90%.",
+          activities: [
+            {
+              weeks: "Daily Planning System",
+              subtitle: "Every morning:",
+              bullets: [
+                "Write top 3 priorities.",
+                "Estimate time required.",
+                "Schedule work blocks."
+              ],
+              schedule: [
+                { task: "Physics report", time: "9:00-10:00" },
+                { task: "Programming practice", time: "14:00-15:00" },
+                { task: "Review notes", time: "19:00-19:30" }
+              ]
+            },
+            {
+              weeks: "Weekly Planning",
+              subtitle: "Every Sunday:",
+              bullets: [
+                "Review completed tasks",
+                "Plan next week",
+                "Identify important deadlines"
+              ]
+            }
+          ],
+          tracking: [
+            { metric: "Tasks completed on time", goal: "90%" },
+            { metric: "Weekly plans completed", goal: "12" },
+            { metric: "Missed deadlines", goal: "<2" }
+          ],
+          successIndicators: [
+            { text: "No all-night rushing", completed: true },
+            { text: "Better workload balance", completed: true },
+            { text: "Less stress", completed: true }
+          ]
+        },
+        {
+          id: "w2",
+          title: "Weakness 2: Difficulty with Routine Work",
+          situation: "You enjoy exciting tasks but avoid repetitive work.",
+          objective: "Build discipline to consistently complete routine tasks.",
+          activities: [
+            {
+              weeks: "Habit Building",
+              subtitle: "Use Pomodoro technique, 2-minute rule, Habit tracker.",
+              bullets: [],
+              habitTable: [
+                { activity: "Documentation", time: "15 min" },
+                { activity: "Review notes", time: "15 min" },
+                { activity: "Organize files", time: "10 min" }
+              ]
+            },
+            {
+              weeks: "Reward System",
+              subtitle: "After completing routine milestones:",
+              bullets: [
+                "5 completed sessions -> small reward",
+                "20 completed sessions -> larger reward"
+              ]
+            }
+          ],
+          tracking: [
+            { metric: "Routine sessions / week", goal: "5" },
+            { metric: "Consistency rate", goal: "80%" },
+            { metric: "Documentation completion", goal: "100%" }
+          ],
+          successIndicators: [
+            { text: "Less procrastination", completed: true },
+            { text: "More organized projects", completed: true },
+            { text: "Better study habits", completed: true }
+          ]
+        },
+        {
+          id: "w3",
+          title: "Weakness 3: Lack of Long-Term Planning",
+          situation: "You focus heavily on immediate results and prototypes.",
+          objective: "Develop strategic planning skills through roadmap creation and regular reviews.",
+          activities: [
+            {
+              weeks: "Week 1 Core Objectives",
+              subtitle: "Create structured roadmaps for academic and professional tracks.",
+              bullets: [],
+              longTermGoals: {
+                threeMonth: ["Improve GPA", "Learn Python", "Finish project"],
+                oneYear: ["Build strong portfolio", "Secure internship", "Develop advanced programming skills"]
+              }
+            },
+            {
+              weeks: "Every Two Weeks Review",
+              subtitle: "Perform self-evaluation check-ins:",
+              bullets: [
+                "What is working?",
+                "What is not working?",
+                "What needs adjustment?"
+              ]
+            },
+            {
+              weeks: "Before Every New Project",
+              subtitle: "Create project-scoping matrix:",
+              bullets: [],
+              projectTemplate: [
+                { section: "Goal", example: "Build automation tool" },
+                { section: "Deadline", example: "August" },
+                { section: "Resources", example: "Python, tutorials" },
+                { section: "Risks", example: "Lack of time" },
+                { section: "Success Criteria", example: "Working software" }
+              ]
+            }
+          ],
+          tracking: [
+            { metric: "Goal reviews", goal: "6" },
+            { metric: "Roadmaps created", goal: "3" },
+            { metric: "Milestones achieved", goal: "70%" }
+          ],
+          successIndicators: [
+            { text: "Better project planning", completed: true },
+            { text: "Stronger future focus", completed: true },
+            { text: "Higher project completion rate", completed: true }
+          ]
+        }
       ]
     }
   },
@@ -199,41 +452,17 @@ const App = () => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     
-    const savedData = localStorage.getItem('my-portfolio-english-data-v12');
+    // Explicit storage version for updated strengths & detailed PDP structure
+    const savedData = localStorage.getItem('my-portfolio-english-data-v20');
     if (savedData) {
       try {
         const parsed = JSON.parse(savedData);
-        
-        // Migrate analyst to innovator if loading older local storage data
-        if (parsed.selfEvaluation && !parsed.selfEvaluation.innovator) {
-          parsed.selfEvaluation.innovator = {
-            title: "My Role in a Team - An Innovator",
-            description: "Usually considered as an innovator in the team, I deal with problems by introducing creative ideas, modern technical approaches, and original problem-solving-oriented thinking. I love exploring state-of-the-art technologies, brainstorming alternative design options, and pushing technical boundaries to keep our project innovative, efficient, and highly adaptive to unpredictable situations.",
-            bullets: [
-              "Creative Problem Solving",
-              "Exploration of Modern Technologies",
-              "Out-of-the-box Thinking",
-              "Rapid Prototyping & Experimentation"
-            ]
+        // Fallback for detailed PDP validation
+        if (!parsed.selfEvaluation || !parsed.selfEvaluation.pdpDetailed) {
+          parsed.selfEvaluation = {
+            ...parsed.selfEvaluation,
+            pdpDetailed: initialData.selfEvaluation.pdpDetailed
           };
-          delete parsed.selfEvaluation.analyst;
-        }
-
-        // Robust backward-compatibility migration helper for PDP items
-        const migrateToProgressObject = (arr, defaultProgress = 50) => {
-          if (!arr) return [];
-          return arr.map(item => {
-            if (typeof item === 'string') {
-              return { text: item, progress: defaultProgress };
-            }
-            return item;
-          });
-        };
-
-        if (parsed.selfEvaluation && parsed.selfEvaluation.pdp) {
-          parsed.selfEvaluation.pdp.smartObjectives = migrateToProgressObject(parsed.selfEvaluation.pdp.smartObjectives, 60);
-          parsed.selfEvaluation.pdp.strategicLearning = migrateToProgressObject(parsed.selfEvaluation.pdp.strategicLearning, 50);
-          parsed.selfEvaluation.pdp.tracking = migrateToProgressObject(parsed.selfEvaluation.pdp.tracking, 80);
         }
         setData(parsed);
       } catch (e) {
@@ -247,12 +476,12 @@ const App = () => {
   }, []);
 
   const handleSave = () => {
-    localStorage.setItem('my-portfolio-english-data-v12', JSON.stringify(data));
+    localStorage.setItem('my-portfolio-english-data-v20', JSON.stringify(data));
     setIsEditMode(false);
   };
 
   const handleReset = () => {
-    localStorage.removeItem('my-portfolio-english-data-v12');
+    localStorage.removeItem('my-portfolio-english-data-v20');
     setData(initialData);
     setIsEditMode(false);
     window.location.reload();
@@ -276,18 +505,48 @@ const App = () => {
     }
   };
 
+  const toggleStrengthIndicatorCheck = (strengthIdx, indicatorIdx) => {
+    const updatedStrengths = [...data.selfEvaluation.pdpDetailed.strengths];
+    updatedStrengths[strengthIdx].successIndicators[indicatorIdx].completed = !updatedStrengths[strengthIdx].successIndicators[indicatorIdx].completed;
+    setData({
+      ...data,
+      selfEvaluation: {
+        ...data.selfEvaluation,
+        pdpDetailed: {
+          ...data.selfEvaluation.pdpDetailed,
+          strengths: updatedStrengths
+        }
+      }
+    });
+  };
+
+  const toggleWeaknessIndicatorCheck = (weaknessIdx, indicatorIdx) => {
+    const updatedWeaknesses = [...data.selfEvaluation.pdpDetailed.weaknesses];
+    updatedWeaknesses[weaknessIdx].successIndicators[indicatorIdx].completed = !updatedWeaknesses[weaknessIdx].successIndicators[indicatorIdx].completed;
+    setData({
+      ...data,
+      selfEvaluation: {
+        ...data.selfEvaluation,
+        pdpDetailed: {
+          ...data.selfEvaluation.pdpDetailed,
+          weaknesses: updatedWeaknesses
+        }
+      }
+    });
+  };
+
   const EditableText = ({ value, onUpdate, className = "", multiline = false }) => {
     if (!isEditMode) return <span className={className}>{value}</span>;
     return multiline ? (
       <textarea
-        className={`bg-slate-800 border border-blue-500 text-blue-100 focus:ring-2 focus:ring-blue-400 focus:outline-none w-full p-2 rounded-xl ${className}`}
+        className={`bg-slate-900 border border-indigo-500 text-indigo-100 focus:ring-2 focus:ring-indigo-400 focus:outline-none w-full p-2 rounded-xl ${className}`}
         value={value}
         onChange={(e) => onUpdate(e.target.value)}
-        rows={4}
+        rows={3}
       />
     ) : (
       <input
-        className={`bg-slate-800 border-b border-blue-500 text-blue-100 focus:outline-none p-2 rounded-md ${className}`}
+        className={`bg-slate-900 border-b border-indigo-500 text-indigo-100 focus:outline-none p-1.5 rounded-md ${className}`}
         value={value}
         onChange={(e) => onUpdate(e.target.value)}
       />
@@ -295,43 +554,44 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-300 font-sans selection:bg-blue-500/30">
-      {/* Decorative Blur Backgrounds */}
+    <div className="min-h-screen bg-slate-950 text-slate-300 font-sans selection:bg-indigo-500/30">
+      {/* Decorative Glow Elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-600/10 blur-[120px] rounded-full"></div>
-        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-indigo-600/10 blur-[120px] rounded-full"></div>
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-indigo-600/10 blur-[120px] rounded-full"></div>
+        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-600/10 blur-[120px] rounded-full"></div>
       </div>
 
-      {/* Navigation Bar */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-slate-950/80 backdrop-blur-md border-b border-slate-800 py-4' : 'bg-transparent py-6'}`}>
+      {/* Navigation Header */}
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-slate-950/80 backdrop-blur-md border-b border-slate-900 py-4' : 'bg-transparent py-6'}`}>
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           <div className="flex items-center gap-2 font-black text-xl text-white tracking-tighter cursor-pointer" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center italic text-sm">HD</div>
+            <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center italic text-sm">HD</div>
             <span>PORTFOLIO</span>
           </div>
           <div className="hidden md:flex items-center gap-8 text-sm font-bold uppercase tracking-widest text-slate-400">
-            <button onClick={() => scrollToSection('education')} className="hover:text-blue-500 transition-colors">Education</button>
-            <button onClick={() => scrollToSection('experience-team')} className="hover:text-blue-500 transition-colors">Projects</button>
-            <button onClick={() => scrollToSection('self-evaluation')} className="hover:text-blue-500 transition-colors text-blue-400 border-b border-blue-500/30">Self-Evaluation</button>
-            <button onClick={() => scrollToSection('skills')} className="hover:text-blue-500 transition-colors">Skills</button>
-            <button onClick={() => scrollToSection('roadmap')} className="hover:text-blue-500 transition-colors">Roadmap</button>
+            <button onClick={() => scrollToSection('education')} className="hover:text-indigo-400 transition-colors">Education</button>
+            <button onClick={() => scrollToSection('experience-team')} className="hover:text-indigo-400 transition-colors">Projects</button>
+            <button onClick={() => scrollToSection('self-evaluation')} className="hover:text-indigo-400 transition-colors">Self-Evaluation</button>
+            <button onClick={() => scrollToSection('pdp')} className="hover:text-emerald-400 transition-colors text-emerald-400 font-extrabold border-b border-emerald-500/30">PDP</button>
+            <button onClick={() => scrollToSection('skills')} className="hover:text-indigo-400 transition-colors">Skills</button>
+            <button onClick={() => scrollToSection('roadmap')} className="hover:text-indigo-400 transition-colors">Roadmap</button>
           </div>
         </div>
       </nav>
 
-      {/* Floating Control Bar */}
+      {/* Control Station (Float Edit Tools) */}
       <div className="fixed bottom-8 right-8 z-50 flex flex-col gap-2 items-end">
         {isEditMode ? (
           <>
-            <button onClick={handleReset} className="flex items-center gap-2 bg-rose-600 text-white px-4 py-2 rounded-xl shadow-lg hover:bg-rose-700 transition-all text-xs">
+            <button onClick={handleReset} className="flex items-center gap-2 bg-rose-600 text-white px-4 py-2 rounded-xl shadow-lg hover:bg-rose-700 transition-all text-xs font-bold">
               <RotateCcw size={16} /> Reset All
             </button>
-            <button onClick={handleSave} className="flex items-center gap-2 bg-emerald-500 text-white px-6 py-3 rounded-xl shadow-lg hover:bg-emerald-600 transition-all scale-105">
+            <button onClick={handleSave} className="flex items-center gap-2 bg-emerald-500 text-white px-6 py-3 rounded-xl shadow-lg hover:bg-emerald-600 transition-all scale-105 font-bold">
               <Save size={20} /> Save Changes
             </button>
           </>
         ) : (
-          <button onClick={() => setIsEditMode(true)} className="flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-xl shadow-lg hover:bg-blue-700 transition-all">
+          <button onClick={() => setIsEditMode(true)} className="flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-xl shadow-lg hover:bg-indigo-700 transition-all font-bold">
             <Edit3 size={20} /> Edit Portfolio
           </button>
         )}
@@ -340,7 +600,7 @@ const App = () => {
       {/* Hero Header */}
       <header className="relative max-w-5xl mx-auto pt-40 pb-20 px-6 text-center">
         <div className="mb-8 inline-block relative">
-          <div className="absolute inset-0 bg-blue-500 blur-3xl opacity-20"></div>
+          <div className="absolute inset-0 bg-indigo-500 blur-3xl opacity-20"></div>
           <div className="relative w-48 h-48 mx-auto rounded-full border-4 border-slate-800 overflow-hidden shadow-2xl bg-slate-900">
             <img 
               src="profile.jpg" 
@@ -349,7 +609,7 @@ const App = () => {
               onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"; }}
             />
           </div>
-          <div className="absolute -bottom-2 -right-2 bg-blue-600 p-3 rounded-2xl border-4 border-slate-950 text-white shadow-xl">
+          <div className="absolute -bottom-2 -right-2 bg-indigo-600 p-3 rounded-2xl border-4 border-slate-950 text-white shadow-xl">
             <Cpu size={24} />
           </div>
         </div>
@@ -358,7 +618,7 @@ const App = () => {
           <EditableText value={data.intro.name} onUpdate={(v) => updateField('intro.name', v)} />
         </h1>
         
-        <p className="text-2xl font-semibold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent mb-8">
+        <p className="text-2xl font-semibold bg-gradient-to-r from-indigo-400 to-blue-400 bg-clip-text text-transparent mb-8">
           <EditableText value={data.intro.title} onUpdate={(v) => updateField('intro.title', v)} />
         </p>
         
@@ -366,24 +626,24 @@ const App = () => {
           <EditableText value={data.intro.bio} onUpdate={(v) => updateField('intro.bio', v)} multiline />
         </p>
         
-        {/* Contact Me Section */}
-        <div className="max-w-xl mx-auto bg-slate-900/40 border border-slate-800 rounded-3xl p-6 flex flex-col md:flex-row items-center justify-between gap-6 backdrop-blur-sm group">
+        {/* Contact Links */}
+        <div className="max-w-xl mx-auto bg-slate-900/40 border border-slate-800/80 rounded-3xl p-6 flex flex-col md:flex-row items-center justify-between gap-6 backdrop-blur-sm group">
           <div className="flex flex-col items-start gap-4">
-            <div className="flex items-center gap-3 text-sm text-slate-300 hover:text-blue-400 transition-colors">
+            <div className="flex items-center gap-3 text-sm text-slate-300 hover:text-indigo-400 transition-colors">
               <Github size={18} className="text-slate-500" />
               <EditableText value={data.intro.contact.github} onUpdate={(v) => updateField('intro.contact.github', v)} />
             </div>
-            <div className="flex items-center gap-3 text-sm text-slate-300 hover:text-blue-400 transition-colors">
+            <div className="flex items-center gap-3 text-sm text-slate-300 hover:text-indigo-400 transition-colors">
               <Phone size={18} className="text-slate-500" />
               <EditableText value={data.intro.contact.phone} onUpdate={(v) => updateField('intro.contact.phone', v)} />
             </div>
-            <div className="flex items-center gap-3 text-sm text-slate-300 hover:text-blue-400 transition-colors">
+            <div className="flex items-center gap-3 text-sm text-slate-300 hover:text-indigo-400 transition-colors">
               <Mail size={18} className="text-slate-500" />
               <EditableText value={data.intro.contact.email} onUpdate={(v) => updateField('intro.contact.email', v)} />
             </div>
           </div>
           
-          <button className="w-full md:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-blue-600 text-white font-bold rounded-2xl hover:bg-blue-700 hover:scale-[1.02] active:scale-95 transition-all shadow-xl shadow-blue-600/20">
+          <button className="w-full md:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-indigo-600 text-white font-bold rounded-2xl hover:bg-indigo-700 hover:scale-[1.02] active:scale-95 transition-all shadow-xl shadow-indigo-600/20">
             Contact Me <ExternalLink size={18} />
           </button>
         </div>
@@ -395,21 +655,21 @@ const App = () => {
         {/* Education Section */}
         <section id="education" className="space-y-8 scroll-mt-24">
           <h2 className="text-2xl font-bold flex items-center gap-3 text-white uppercase tracking-widest text-sm">
-            <div className="h-4 w-1 bg-blue-500 rounded-full"></div>
+            <div className="h-4 w-1 bg-indigo-500 rounded-full"></div>
             Education
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {data.education.map((edu, idx) => (
-              <div key={idx} className="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl hover:border-blue-500/30 transition-all flex flex-col justify-between">
+              <div key={idx} className="bg-slate-900/50 border border-slate-800 p-8 rounded-3xl hover:border-indigo-500/30 transition-all flex flex-col justify-between">
                 <div>
                   <EditableText className="block font-bold text-xl text-white mb-1" value={edu.school} onUpdate={(v) => {
                     const newList = [...data.education]; newList[idx].school = v; setData({...data, education: newList});
                   }} />
-                  <EditableText className="block text-blue-400/80 font-medium mb-3" value={edu.degree} onUpdate={(v) => {
+                  <EditableText className="block text-indigo-400/80 font-medium mb-3" value={edu.degree} onUpdate={(v) => {
                     const newList = [...data.education]; newList[idx].degree = v; setData({...data, education: newList});
                   }} />
-                  <div className="bg-blue-600/10 border border-blue-500/20 rounded-xl p-3 inline-block">
-                    <EditableText className="block text-sm font-bold text-blue-300" value={edu.gpa} onUpdate={(v) => {
+                  <div className="bg-indigo-600/10 border border-indigo-500/20 rounded-xl p-3 inline-block">
+                    <EditableText className="block text-sm font-bold text-indigo-300" value={edu.gpa} onUpdate={(v) => {
                       const newList = [...data.education]; newList[idx].gpa = v; setData({...data, education: newList});
                     }} />
                   </div>
@@ -428,7 +688,7 @@ const App = () => {
             <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-600/5 blur-[100px] pointer-events-none"></div>
             
             <div className="grid lg:grid-cols-5 gap-12 relative z-10">
-              {/* Projects Side (Left 2 columns) */}
+              {/* Projects Side */}
               <div className="lg:col-span-2 space-y-8">
                 <h2 className="text-2xl font-bold flex items-center gap-3 text-white uppercase tracking-widest text-sm">
                   <div className="h-4 w-1 bg-indigo-500 rounded-full"></div>
@@ -474,7 +734,7 @@ const App = () => {
                   </div>
 
                   {/* Image Showcase Gallery */}
-                  <div className="bg-slate-950/50 border border-slate-800/50 rounded-3xl overflow-hidden group hover:border-blue-500/30 transition-all duration-500">
+                  <div className="bg-slate-950/50 border border-slate-800/50 rounded-3xl overflow-hidden group hover:border-indigo-500/30 transition-all duration-500">
                     <div className="h-48 w-full bg-slate-900 flex items-center justify-center overflow-hidden relative">
                       <img 
                         src={data.secondaryProject.images[activeImageIdx]} 
@@ -488,14 +748,14 @@ const App = () => {
                           <button 
                             key={idx} 
                             onClick={() => setActiveImageIdx(idx)}
-                            className={`h-1.5 rounded-full transition-all ${activeImageIdx === idx ? 'w-8 bg-blue-500' : 'w-2 bg-white/30'}`}
+                            className={`h-1.5 rounded-full transition-all ${activeImageIdx === idx ? 'w-8 bg-indigo-500' : 'w-2 bg-white/30'}`}
                           />
                         ))}
                       </div>
                     </div>
                     <div className="p-6">
                       <div className="flex items-center gap-2 mb-2">
-                        <ImageIcon size={16} className="text-blue-500" />
+                        <ImageIcon size={16} className="text-indigo-500" />
                         <EditableText className="block font-bold text-lg text-white" value={data.secondaryProject.title} onUpdate={(v) => updateField('secondaryProject.title', v)} />
                       </div>
                       <EditableText className="block text-xs text-slate-500 leading-relaxed" value={data.secondaryProject.shortDesc} onUpdate={(v) => updateField('secondaryProject.shortDesc', v)} multiline />
@@ -527,7 +787,7 @@ const App = () => {
                 </div>
               </div>
 
-              {/* Co-operation Progress Side (Right 3 columns) */}
+              {/* Co-operation Progress Side */}
               <div className="lg:col-span-3 space-y-8">
                 <h2 className="text-2xl font-bold flex items-center gap-3 text-white uppercase tracking-widest text-sm">
                   <div className="h-4 w-1 bg-emerald-500 rounded-full"></div>
@@ -537,7 +797,6 @@ const App = () => {
                 <div className="relative border-l-2 border-slate-800 ml-4 pl-8 space-y-12">
                   {data.cooperationProgress.map((item, idx) => (
                     <div key={idx} className="relative">
-                      {/* Timeline Dot */}
                       <div className="absolute -left-[41px] top-0 w-5 h-5 rounded-full bg-slate-950 border-2 border-emerald-500 z-10 flex items-center justify-center shadow-[0_0_10px_rgba(16,185,129,0.3)]">
                         {idx === data.cooperationProgress.length - 2 ? <CheckCircle2 size={12} className="text-emerald-500" /> : <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full"></div>}
                       </div>
@@ -558,25 +817,25 @@ const App = () => {
           </div>
         </section>
 
-        {/* Combined Section: Self-Evaluation & Personal Development Planning (PDP) */}
+        {/* Section: Self-Evaluation */}
         <section id="self-evaluation" className="space-y-12 scroll-mt-24">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-slate-800 pb-4">
             <div>
               <h2 className="text-3xl font-extrabold text-white flex items-center gap-3">
-                <span className="w-2.5 h-7 bg-blue-600 rounded-full block"></span>
-                Self-Evaluation & Personal Growth Plan
+                <span className="w-2.5 h-7 bg-indigo-600 rounded-full block"></span>
+                Self-Evaluation & SWOT Matrix
               </h2>
-              <p className="text-slate-500 text-sm mt-1">Analyzing my team behavior (Reference: image_18a53b.jpg) and setting structural targets with visual metrics (Reference: image_8558c3.jpg)</p>
+              <p className="text-slate-500 text-sm mt-1">Analyzing team behavior dynamics (referenced in image_18a53b.jpg) and core engineering competency structures.</p>
             </div>
             <button 
               onClick={() => setPanels({ innovator: true, istp: true, director: true })}
-              className="text-xs bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-lg text-slate-400 hover:text-white hover:border-blue-500/50 transition-all mt-4 md:mt-0"
+              className="text-xs bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-lg text-slate-400 hover:text-white hover:border-indigo-500/50 transition-all mt-4 md:mt-0"
             >
               Expand All Panels
             </button>
           </div>
 
-          {/* Part A: Personality & Teamwork Accordions (image_18a53b.jpg) */}
+          {/* Part A: Personality & Teamwork Accordions (referenced in image_18a53b.jpg) */}
           <div className="space-y-6">
             
             {/* Panel 1: My Role in a Team - An Innovator */}
@@ -586,7 +845,7 @@ const App = () => {
                 className="w-full text-left px-8 py-6 flex justify-between items-center bg-slate-900/40 hover:bg-slate-900/60 transition-colors"
               >
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-400">
+                  <div className="w-10 h-10 rounded-2xl bg-indigo-500/10 flex items-center justify-center text-indigo-400">
                     <Lightbulb size={20} />
                   </div>
                   <h3 className="text-xl md:text-2xl font-black text-white">
@@ -605,12 +864,12 @@ const App = () => {
                   </p>
                   <div className="grid sm:grid-cols-2 gap-4 pt-4">
                     {data.selfEvaluation.innovator.bullets.map((bullet, idx) => (
-                      <div key={idx} className="flex items-center gap-3 bg-slate-950/50 p-4 rounded-2xl border border-slate-800/60 hover:border-blue-500/30 transition-all">
-                        <div className="w-2.5 h-2.5 bg-blue-500 rounded-full shadow-[0_0_8px_rgba(59,130,246,0.6)]"></div>
+                      <div key={idx} className="flex items-center gap-3 bg-slate-950/50 p-4 rounded-2xl border border-slate-800/60 hover:border-indigo-500/30 transition-all">
+                        <div className="w-2.5 h-2.5 bg-indigo-500 rounded-full shadow-[0_0_8px_rgba(99,102,241,0.6)]"></div>
                         <EditableText className="text-sm font-semibold text-slate-200" value={bullet} onUpdate={(v) => {
                           const newList = [...data.selfEvaluation.innovator.bullets];
                           newList[idx] = v;
-                          updateField('selfEvaluation.selfEvaluation.innovator.bullets', newList);
+                          updateField('selfEvaluation.innovator.bullets', newList);
                         }} />
                       </div>
                     ))}
@@ -700,268 +959,558 @@ const App = () => {
 
           </div>
 
-          {/* Part B: Self-Assessment & PDP Strategic Grid (image_8558c3.jpg) */}
-          <div className="grid lg:grid-cols-11 gap-4 items-stretch pt-8">
-            {/* Left Box: Self-Assessment Block (Col Span 5) */}
-            <div className="lg:col-span-5 bg-slate-900/60 border border-slate-800 rounded-[2.5rem] p-8 space-y-8 flex flex-col justify-between">
+          {/* Part B: Self-Assessment Block (SWOT Grid representing image_554fdb.png, image_554f28.png) */}
+          <div className="bg-slate-900/40 border border-slate-800 rounded-[2.5rem] p-8 md:p-10 space-y-8">
+            <div className="flex items-center gap-3 border-b border-slate-800 pb-6">
+              <div className="p-3 bg-indigo-500/10 text-indigo-400 rounded-2xl">
+                <Brain size={24} />
+              </div>
               <div>
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="p-2.5 bg-blue-500/10 text-blue-400 rounded-xl">
-                    <Brain size={22} />
+                <h3 className="text-2xl font-bold text-white">
+                  <EditableText value={data.selfEvaluation.selfAssessment.title} onUpdate={(v) => updateField('selfEvaluation.selfAssessment.title', v)} />
+                </h3>
+                <p className="text-sm text-slate-500 font-mono">STRENGTHS - WEAKNESSES - AREAS FOR IMPROVEMENT</p>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6 pt-4">
+              {/* Strengths Column */}
+              <div className="space-y-4 bg-slate-950/30 p-6 rounded-3xl border border-emerald-500/10">
+                <span className="text-xs font-black uppercase tracking-widest text-emerald-400 flex items-center gap-1.5 border-b border-slate-800/80 pb-3">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span> Strengths (image_554fdb.png)
+                </span>
+                <ul className="space-y-3">
+                  {data.selfEvaluation.selfAssessment.strengths.map((str, idx) => (
+                    <li key={idx} className="bg-slate-950/60 p-4 rounded-xl border border-slate-800/40 flex items-start gap-2.5">
+                      <CheckCircle2 size={16} className="text-emerald-500 shrink-0 mt-0.5" />
+                      <EditableText className="text-sm text-slate-300 leading-snug" value={str} onUpdate={(v) => {
+                        const list = [...data.selfEvaluation.selfAssessment.strengths];
+                        list[idx] = v;
+                        updateField('selfEvaluation.selfAssessment.strengths', list);
+                      }} multiline />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Weaknesses Column */}
+              <div className="space-y-4 bg-slate-950/30 p-6 rounded-3xl border border-amber-500/10">
+                <span className="text-xs font-black uppercase tracking-widest text-amber-500 flex items-center gap-1.5 border-b border-slate-800/80 pb-3">
+                  <span className="w-2 h-2 rounded-full bg-amber-500"></span> Weaknesses (image_554fdb.png)
+                </span>
+                <ul className="space-y-3">
+                  {data.selfEvaluation.selfAssessment.weaknesses.map((weak, idx) => (
+                    <li key={idx} className="bg-slate-950/60 p-4 rounded-xl border border-slate-800/40 flex items-start gap-2.5">
+                      <AlertCircle size={16} className="text-amber-500 shrink-0 mt-0.5" />
+                      <EditableText className="text-sm text-slate-300 leading-snug" value={weak} onUpdate={(v) => {
+                        const list = [...data.selfEvaluation.selfAssessment.weaknesses];
+                        list[idx] = v;
+                        updateField('selfEvaluation.selfAssessment.weaknesses', list);
+                      }} multiline />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Improvements Column */}
+              <div className="space-y-4 bg-slate-950/30 p-6 rounded-3xl border border-sky-500/10">
+                <span className="text-xs font-black uppercase tracking-widest text-sky-400 flex items-center gap-1.5 border-b border-slate-800/80 pb-3">
+                  <span className="w-2 h-2 rounded-full bg-sky-400"></span> Actionable Solutions (image_554f28.png)
+                </span>
+                <ul className="space-y-3">
+                  {data.selfEvaluation.selfAssessment.improvements.map((imp, idx) => (
+                    <li key={idx} className="bg-slate-950/60 p-4 rounded-xl border border-slate-800/40 flex items-start gap-2.5">
+                      <Lightbulb size={16} className="text-sky-400 shrink-0 mt-0.5" />
+                      <EditableText className="text-sm text-slate-300 leading-snug" value={imp} onUpdate={(v) => {
+                        const list = [...data.selfEvaluation.selfAssessment.improvements];
+                        list[idx] = v;
+                        updateField('selfEvaluation.selfAssessment.improvements', list);
+                      }} multiline />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {}
+        {/* Section: Personal Development Plan (Detailed Version) - image_553fe2.png, image_54ee44.png, image_54ee27.png... */}
+        <section id="pdp" className="space-y-12 scroll-mt-24">
+          <div className="border-b border-slate-800 pb-6">
+            <h2 className="text-4xl font-extrabold text-white tracking-tight flex items-center gap-3">
+              <span className="w-2.5 h-8 bg-emerald-500 rounded-full block animate-pulse"></span>
+              <EditableText value={data.selfEvaluation.pdpDetailed.title} onUpdate={(v) => updateField('selfEvaluation.pdpDetailed.title', v)} />
+            </h2>
+            <div className="mt-4 space-y-2 text-sm bg-slate-900/30 p-4 rounded-2xl border border-slate-800 max-w-2xl">
+              <div className="flex items-center gap-2 text-slate-300">
+                <span className="font-bold text-emerald-400 font-mono">Name:</span>
+                <EditableText value={data.selfEvaluation.pdpDetailed.name} onUpdate={(v) => updateField('selfEvaluation.pdpDetailed.name', v)} />
+              </div>
+              <div className="flex items-center gap-2 text-slate-300">
+                <span className="font-bold text-emerald-400 font-mono">Duration:</span>
+                <EditableText value={data.selfEvaluation.pdpDetailed.duration} onUpdate={(v) => updateField('selfEvaluation.pdpDetailed.duration', v)} />
+              </div>
+              <div className="text-slate-300 leading-relaxed">
+                <span className="font-bold text-emerald-400 font-mono">Main Goal:</span>{' '}
+                <EditableText value={data.selfEvaluation.pdpDetailed.mainGoal} onUpdate={(v) => updateField('selfEvaluation.pdpDetailed.mainGoal', v)} multiline />
+              </div>
+            </div>
+          </div>
+
+          <div className="space-y-16">
+            {/* 3 Core Strengths Plans (image_553fe2.png, image_54ee44.png, image_54ee27.png) */}
+            {data.selfEvaluation.pdpDetailed.strengths.map((str, sIdx) => (
+              <div key={str.id} className="bg-slate-900/30 border border-slate-800 rounded-[2.5rem] p-8 md:p-12 space-y-8 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/5 blur-[80px] pointer-events-none"></div>
+                
+                {/* Strength Title */}
+                <h3 className="text-2xl md:text-3xl font-black text-indigo-400 tracking-tight border-b border-slate-800/80 pb-4">
+                  <EditableText value={str.title} onUpdate={(v) => {
+                    const list = [...data.selfEvaluation.pdpDetailed.strengths];
+                    list[sIdx].title = v;
+                    updateField('selfEvaluation.pdpDetailed.strengths', list);
+                  }} />
+                </h3>
+
+                {/* Situation & SMART Objective */}
+                <div className="grid md:grid-cols-2 gap-8 bg-slate-950/40 p-6 rounded-2xl border border-slate-800/50">
+                  <div className="space-y-2">
+                    <h4 className="text-xs uppercase tracking-widest font-black text-slate-500 font-mono">Current Situation</h4>
+                    <p className="text-sm text-slate-300 leading-relaxed">
+                      <EditableText value={str.situation} onUpdate={(v) => {
+                        const list = [...data.selfEvaluation.pdpDetailed.strengths];
+                        list[sIdx].situation = v;
+                        updateField('selfEvaluation.pdpDetailed.strengths', list);
+                      }} multiline />
+                    </p>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white">
-                      <EditableText value={data.selfEvaluation.selfAssessment.title} onUpdate={(v) => updateField('selfEvaluation.selfAssessment.title', v)} />
-                    </h3>
-                    <p className="text-xs text-slate-500">
-                      <EditableText value={data.selfEvaluation.selfAssessment.subtitle} onUpdate={(v) => updateField('selfEvaluation.selfAssessment.subtitle', v)} />
+                  <div className="space-y-2">
+                    <h4 className="text-xs uppercase tracking-widest font-black text-indigo-400 font-mono">SMART Objective</h4>
+                    <p className="text-sm text-slate-200 leading-relaxed font-medium">
+                      <EditableText value={str.objective} onUpdate={(v) => {
+                        const list = [...data.selfEvaluation.pdpDetailed.strengths];
+                        list[sIdx].objective = v;
+                        updateField('selfEvaluation.pdpDetailed.strengths', list);
+                      }} multiline />
                     </p>
                   </div>
                 </div>
 
-                <div className="space-y-6 mt-8">
-                  {/* Strengths */}
-                  <div className="space-y-2">
-                    <span className="text-[11px] font-black uppercase tracking-widest text-emerald-400 flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Strengths
-                    </span>
-                    <ul className="space-y-2 text-sm text-slate-300">
-                      {data.selfEvaluation.selfAssessment.strengths.map((str, idx) => (
-                        <li key={idx} className="bg-slate-950/40 p-3 rounded-xl border border-slate-800/50 flex items-start gap-2">
-                          <CheckCircle2 size={15} className="text-emerald-500 shrink-0 mt-0.5" />
-                          <EditableText className="text-slate-300 leading-snug" value={str} onUpdate={(v) => {
-                            const list = [...data.selfEvaluation.selfAssessment.strengths];
-                            list[idx] = v;
-                            updateField('selfEvaluation.selfAssessment.strengths', list);
-                          }} multiline />
+                {}
+                {/* Learning Activities */}
+                <div className="space-y-4">
+                  <h4 className="text-xs uppercase tracking-widest font-black text-slate-500 font-mono">Learning Activities</h4>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    {str.activities.map((act, actIdx) => (
+                      <div key={actIdx} className="bg-slate-950/20 p-5 rounded-2xl border border-slate-800 hover:border-slate-700 transition-colors">
+                        <span className="text-sm font-bold text-indigo-400 block mb-2 font-mono">
+                          <EditableText value={act.weeks} onUpdate={(v) => {
+                            const list = [...data.selfEvaluation.pdpDetailed.strengths];
+                            list[sIdx].activities[actIdx].weeks = v;
+                            updateField('selfEvaluation.pdpDetailed.strengths', list);
+                          }} />
+                        </span>
+                        {act.subtitle && (
+                          <span className="text-xs font-semibold text-slate-400 block mb-2">
+                            <EditableText value={act.subtitle} onUpdate={(v) => {
+                              const list = [...data.selfEvaluation.pdpDetailed.strengths];
+                              list[sIdx].activities[actIdx].subtitle = v;
+                              updateField('selfEvaluation.pdpDetailed.strengths', list);
+                            }} />
+                          </span>
+                        )}
+                        <ul className="space-y-2 text-xs text-slate-300">
+                          {act.bullets.map((bullet, bIdx) => (
+                            <li key={bIdx} className="flex gap-2">
+                              <span className="text-indigo-500 font-bold shrink-0">•</span>
+                              <EditableText value={bullet} onUpdate={(v) => {
+                                const list = [...data.selfEvaluation.pdpDetailed.strengths];
+                                list[sIdx].activities[actIdx].bullets[bIdx] = v;
+                                updateField('selfEvaluation.pdpDetailed.strengths', list);
+                              }} multiline />
+                            </li>
+                          ))}
+                        </ul>
+
+                        {act.extraSubtitle && (
+                          <div className="mt-3 pt-3 border-t border-slate-800/50">
+                            <span className="text-xs font-semibold text-slate-400 block mb-2">
+                              <EditableText value={act.extraSubtitle} onUpdate={(v) => {
+                                const list = [...data.selfEvaluation.pdpDetailed.strengths];
+                                list[sIdx].activities[actIdx].extraSubtitle = v;
+                                updateField('selfEvaluation.pdpDetailed.strengths', list);
+                              }} />
+                            </span>
+                            <ul className="space-y-1.5 text-xs text-slate-400">
+                              {act.extraBullets.map((ebullet, ebIdx) => (
+                                <li key={ebIdx} className="flex gap-2">
+                                  <span className="text-slate-500 font-bold shrink-0">-</span>
+                                  <EditableText value={ebullet} onUpdate={(v) => {
+                                    const list = [...data.selfEvaluation.pdpDetailed.strengths];
+                                    list[sIdx].activities[actIdx].extraBullets[ebIdx] = v;
+                                    updateField('selfEvaluation.pdpDetailed.strengths', list);
+                                  }} multiline />
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Tracking & Success Grid */}
+                <div className="grid md:grid-cols-2 gap-8 pt-4 border-t border-slate-800/50">
+                  {/* Tracking Method Table */}
+                  <div className="space-y-4">
+                    <h4 className="text-xs uppercase tracking-widest font-black text-slate-500 font-mono">Tracking Method</h4>
+                    <div className="overflow-x-auto rounded-xl border border-slate-800 bg-slate-950/40">
+                      <table className="w-full text-left text-xs">
+                        <thead className="bg-slate-950 text-slate-500 border-b border-slate-800">
+                          <tr>
+                            <th className="px-4 py-3 font-mono">Metric</th>
+                            <th className="px-4 py-3 font-mono text-right">Goal</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-slate-800/40">
+                          {str.tracking.map((track, trackIdx) => (
+                            <tr key={trackIdx}>
+                              <td className="px-4 py-3 text-slate-300">
+                                <EditableText value={track.metric} onUpdate={(v) => {
+                                  const list = [...data.selfEvaluation.pdpDetailed.strengths];
+                                  list[sIdx].tracking[trackIdx].metric = v;
+                                  updateField('selfEvaluation.pdpDetailed.strengths', list);
+                                }} />
+                              </td>
+                              <td className="px-4 py-3 text-right font-bold text-indigo-400 font-mono">
+                                <EditableText value={track.goal} onUpdate={(v) => {
+                                  const list = [...data.selfEvaluation.pdpDetailed.strengths];
+                                  list[sIdx].tracking[trackIdx].goal = v;
+                                  updateField('selfEvaluation.pdpDetailed.strengths', list);
+                                }} />
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  {/* Success Indicators Checklist */}
+                  <div className="space-y-4">
+                    <h4 className="text-xs uppercase tracking-widest font-black text-slate-500 font-mono">Success Indicators</h4>
+                    <ul className="space-y-3">
+                      {str.successIndicators.map((ind, indIdx) => (
+                        <li key={indIdx} className="flex items-start gap-3 text-xs select-none">
+                          <button 
+                            onClick={() => toggleStrengthIndicatorCheck(sIdx, indIdx)}
+                            className="text-emerald-500 hover:scale-110 transition-transform shrink-0 mt-0.5"
+                          >
+                            {ind.completed ? <CheckSquare size={18} className="fill-emerald-500/10" /> : <Square size={18} className="text-slate-600" />}
+                          </button>
+                          <span className={`leading-relaxed ${ind.completed ? 'text-slate-300 line-through decoration-slate-700' : 'text-slate-200'}`}>
+                            <EditableText value={ind.text} onUpdate={(v) => {
+                              const list = [...data.selfEvaluation.pdpDetailed.strengths];
+                              list[sIdx].successIndicators[indIdx].text = v;
+                              updateField('selfEvaluation.pdpDetailed.strengths', list);
+                            }} />
+                          </span>
                         </li>
                       ))}
                     </ul>
                   </div>
-
-                  {/* Weaknesses */}
-                  <div className="space-y-2">
-                    <span className="text-[11px] font-black uppercase tracking-widest text-amber-500 flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-amber-500"></span> Weaknesses
-                    </span>
-                    <ul className="space-y-2 text-sm text-slate-300">
-                      {data.selfEvaluation.selfAssessment.weaknesses.map((weak, idx) => (
-                        <li key={idx} className="bg-slate-950/40 p-3 rounded-xl border border-slate-800/50 flex items-start gap-2">
-                          <AlertCircle size={15} className="text-amber-500 shrink-0 mt-0.5" />
-                          <EditableText className="text-slate-300 leading-snug" value={weak} onUpdate={(v) => {
-                            const list = [...data.selfEvaluation.selfAssessment.weaknesses];
-                            list[idx] = v;
-                            updateField('selfEvaluation.selfAssessment.weaknesses', list);
-                          }} multiline />
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Improvements */}
-                  <div className="space-y-2">
-                    <span className="text-[11px] font-black uppercase tracking-widest text-sky-400 flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-sky-400"></span> Improvements Needed
-                    </span>
-                    <ul className="space-y-2 text-sm text-slate-300">
-                      {data.selfEvaluation.selfAssessment.improvements.map((imp, idx) => (
-                        <li key={idx} className="bg-slate-950/40 p-3 rounded-xl border border-sky-500/10 flex items-start gap-2">
-                          <Lightbulb size={15} className="text-sky-400 shrink-0 mt-0.5" />
-                          <EditableText className="text-slate-300 leading-snug" value={imp} onUpdate={(v) => {
-                            const list = [...data.selfEvaluation.selfAssessment.improvements];
-                            list[idx] = v;
-                            updateField('selfEvaluation.selfAssessment.improvements', list);
-                          }} multiline />
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
                 </div>
               </div>
-            </div>
+            ))}
 
-            {/* Middle Vector: HOW? Transition Arrow (Col Span 1) */}
-            <div className="lg:col-span-1 flex flex-col items-center justify-center py-6 lg:py-0">
-              <div className="bg-slate-900 border border-slate-800 p-3 rounded-2xl flex flex-row lg:flex-col items-center gap-2 shadow-xl shrink-0">
-                <span className="text-[10px] font-mono tracking-widest uppercase text-indigo-400 font-black">How?</span>
-                <ArrowRight className="text-indigo-500 animate-pulse hidden lg:block" size={24} />
-                <span className="text-indigo-500 font-bold text-lg lg:hidden">↓</span>
-              </div>
-            </div>
+            {}
+            {/* 3 Core Weaknesses Plans */}
+            {data.selfEvaluation.pdpDetailed.weaknesses.map((weak, wIdx) => (
+              <div key={weak.id} className="bg-slate-900/30 border border-slate-800 rounded-[2.5rem] p-8 md:p-12 space-y-8 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/5 blur-[80px] pointer-events-none"></div>
+                
+                {/* Weakness Title */}
+                <h3 className="text-2xl md:text-3xl font-black text-amber-500 tracking-tight border-b border-slate-800/80 pb-4">
+                  <EditableText value={weak.title} onUpdate={(v) => {
+                    const list = [...data.selfEvaluation.pdpDetailed.weaknesses];
+                    list[wIdx].title = v;
+                    updateField('selfEvaluation.pdpDetailed.weaknesses', list);
+                  }} />
+                </h3>
 
-            {/* Right Box: Personal Dev Planning - PDP Block with Interactive Progress (Col Span 5) */}
-            <div className="lg:col-span-5 bg-slate-900/60 border border-slate-800 rounded-[2.5rem] p-8 space-y-8 flex flex-col justify-between relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/5 blur-[50px] pointer-events-none"></div>
-              <div>
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="p-2.5 bg-indigo-500/10 text-indigo-400 rounded-xl">
-                    <Target size={22} />
+                {/* Situation & SMART Objective */}
+                <div className="grid md:grid-cols-2 gap-8 bg-slate-950/40 p-6 rounded-2xl border border-slate-800/50">
+                  <div className="space-y-2">
+                    <h4 className="text-xs uppercase tracking-widest font-black text-slate-500 font-mono">Current Situation</h4>
+                    <p className="text-sm text-slate-300 leading-relaxed">
+                      <EditableText value={weak.situation} onUpdate={(v) => {
+                        const list = [...data.selfEvaluation.pdpDetailed.weaknesses];
+                        list[wIdx].situation = v;
+                        updateField('selfEvaluation.pdpDetailed.weaknesses', list);
+                      }} multiline />
+                    </p>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white">
-                      <EditableText value={data.selfEvaluation.pdp.title} onUpdate={(v) => updateField('selfEvaluation.pdp.title', v)} />
-                    </h3>
-                    <p className="text-xs text-slate-500">
-                      <EditableText value={data.selfEvaluation.pdp.subtitle} onUpdate={(v) => updateField('selfEvaluation.pdp.subtitle', v)} />
+                  <div className="space-y-2">
+                    <h4 className="text-xs uppercase tracking-widest font-black text-amber-500 font-mono">SMART Objective</h4>
+                    <p className="text-sm text-slate-200 leading-relaxed font-medium">
+                      <EditableText value={weak.objective} onUpdate={(v) => {
+                        const list = [...data.selfEvaluation.pdpDetailed.weaknesses];
+                        list[wIdx].objective = v;
+                        updateField('selfEvaluation.pdpDetailed.weaknesses', list);
+                      }} multiline />
                     </p>
                   </div>
                 </div>
 
-                <div className="space-y-6 mt-8">
-                  {/* SMART Objectives */}
-                  <div className="space-y-2">
-                    <span className="text-[11px] font-black uppercase tracking-widest text-indigo-400 flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-indigo-400"></span> SMART Objectives
-                    </span>
-                    <ul className="space-y-4 text-sm text-slate-300">
-                      {data.selfEvaluation.pdp.smartObjectives.map((obj, idx) => (
-                        <li key={idx} className="bg-slate-950/40 p-4 rounded-xl border border-slate-800/50 flex flex-col gap-3">
-                          <div className="flex items-start gap-2">
-                            <Target size={15} className="text-indigo-400 shrink-0 mt-0.5" />
-                            <EditableText className="text-slate-300 leading-snug" value={obj.text} onUpdate={(v) => {
-                              const list = [...data.selfEvaluation.pdp.smartObjectives];
-                              list[idx].text = v;
-                              updateField('selfEvaluation.pdp.smartObjectives', list);
-                            }} multiline />
+                {/* Learning Activities with Specific Tables (Daily System, Habit Matrix, Scoping template) */}
+                <div className="space-y-4">
+                  <h4 className="text-xs uppercase tracking-widest font-black text-slate-500 font-mono">Learning Activities</h4>
+                  <div className="grid md:grid-cols-1 gap-6">
+                    {weak.activities.map((act, actIdx) => (
+                      <div key={actIdx} className="bg-slate-950/20 p-6 rounded-2xl border border-slate-800">
+                        <span className="text-sm font-bold text-amber-500 block mb-2 font-mono">
+                          <EditableText value={act.weeks} onUpdate={(v) => {
+                            const list = [...data.selfEvaluation.pdpDetailed.weaknesses];
+                            list[wIdx].activities[actIdx].weeks = v;
+                            updateField('selfEvaluation.pdpDetailed.weaknesses', list);
+                          }} />
+                        </span>
+                        {act.subtitle && (
+                          <span className="text-xs font-semibold text-slate-400 block mb-3">
+                            <EditableText value={act.subtitle} onUpdate={(v) => {
+                              const list = [...data.selfEvaluation.pdpDetailed.weaknesses];
+                              list[wIdx].activities[actIdx].subtitle = v;
+                              updateField('selfEvaluation.pdpDetailed.weaknesses', list);
+                            }} />
+                          </span>
+                        )}
+
+                        {/* Bullet Lists */}
+                        {act.bullets && act.bullets.length > 0 && (
+                          <ul className="space-y-2 text-xs text-slate-300 mb-4">
+                            {act.bullets.map((bullet, bIdx) => (
+                              <li key={bIdx} className="flex gap-2">
+                                <span className="text-amber-500 font-bold shrink-0">•</span>
+                                <EditableText value={bullet} onUpdate={(v) => {
+                                  const list = [...data.selfEvaluation.pdpDetailed.weaknesses];
+                                  list[wIdx].activities[actIdx].bullets[bIdx] = v;
+                                  updateField('selfEvaluation.pdpDetailed.weaknesses', list);
+                                }} multiline />
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+
+                        {/* Specific Nested Data Structures based on images */}
+                        
+                        {/* 1. Daily Planning System Schedule Table (image_54ee20.png) */}
+                        {act.schedule && (
+                          <div className="mt-4 overflow-x-auto rounded-xl border border-slate-800 bg-slate-950/40 max-w-xl">
+                            <table className="w-full text-left text-xs">
+                              <thead className="bg-slate-950 text-slate-500 border-b border-slate-800">
+                                <tr>
+                                  <th className="px-4 py-2 font-mono">Task</th>
+                                  <th className="px-4 py-2 font-mono text-right">Time</th>
+                                </tr>
+                              </thead>
+                              <tbody className="divide-y divide-slate-800/40">
+                                {act.schedule.map((sched, sIdx) => (
+                                  <tr key={sIdx}>
+                                    <td className="px-4 py-2 text-slate-300 font-medium">
+                                      <EditableText value={sched.task} onUpdate={(v) => {
+                                        const list = [...data.selfEvaluation.pdpDetailed.weaknesses];
+                                        list[wIdx].activities[actIdx].schedule[sIdx].task = v;
+                                        updateField('selfEvaluation.pdpDetailed.weaknesses', list);
+                                      }} />
+                                    </td>
+                                    <td className="px-4 py-2 text-right font-mono text-amber-500">
+                                      <EditableText value={sched.time} onUpdate={(v) => {
+                                        const list = [...data.selfEvaluation.pdpDetailed.weaknesses];
+                                        list[wIdx].activities[actIdx].schedule[sIdx].time = v;
+                                        updateField('selfEvaluation.pdpDetailed.weaknesses', list);
+                                      }} />
+                                    </td>
+                                  </tr>
+                                ))}
+                              </tbody>
+                            </table>
                           </div>
-                          {/* Interactive Progress Bar */}
-                          <div className="space-y-1.5 pl-6">
-                            <div className="flex justify-between items-center text-[11px] font-mono">
-                              <span className="text-indigo-400 font-bold">Progress Rate</span>
-                              <span className="text-slate-300 font-bold">{obj.progress}%</span>
-                            </div>
-                            <div className="w-full bg-slate-900 h-2.5 rounded-full overflow-hidden border border-slate-800/40">
-                              <div 
-                                className="bg-gradient-to-r from-indigo-600 to-indigo-400 h-full rounded-full transition-all duration-500 shadow-[0_0_8px_rgba(99,102,241,0.5)]" 
-                                style={{ width: `${obj.progress}%` }}
-                              />
-                            </div>
-                            {isEditMode && (
-                              <div className="flex items-center gap-2 pt-1">
-                                <input 
-                                  type="range" 
-                                  min="0" 
-                                  max="100" 
-                                  value={obj.progress} 
-                                  onChange={(e) => {
-                                    const list = [...data.selfEvaluation.pdp.smartObjectives];
-                                    list[idx].progress = parseInt(e.target.value);
-                                    updateField('selfEvaluation.pdp.smartObjectives', list);
-                                  }}
-                                  className="w-full accent-indigo-500 cursor-pointer h-1.5 bg-slate-800 rounded-lg appearance-none"
-                                />
-                              </div>
-                            )}
+                        )}
+
+                        {/* 2. Habit Building Table (image_54ee05.png) */}
+                        {act.habitTable && (
+                          <div className="mt-4 overflow-x-auto rounded-xl border border-slate-800 bg-slate-950/40 max-w-xl">
+                            <table className="w-full text-left text-xs">
+                              <thead className="bg-slate-950 text-slate-500 border-b border-slate-800">
+                                <tr>
+                                  <th className="px-4 py-2 font-mono">Activity</th>
+                                  <th className="px-4 py-2 font-mono text-right">Time</th>
+                                </tr>
+                              </thead>
+                              <tbody className="divide-y divide-slate-800/40">
+                                {act.habitTable.map((hab, hIdx) => (
+                                  <tr key={hIdx}>
+                                    <td className="px-4 py-2 text-slate-300 font-medium">
+                                      <EditableText value={hab.activity} onUpdate={(v) => {
+                                        const list = [...data.selfEvaluation.pdpDetailed.weaknesses];
+                                        list[wIdx].activities[actIdx].habitTable[hIdx].activity = v;
+                                        updateField('selfEvaluation.pdpDetailed.weaknesses', list);
+                                      }} />
+                                    </td>
+                                    <td className="px-4 py-2 text-right font-mono text-amber-500">
+                                      <EditableText value={hab.time} onUpdate={(v) => {
+                                        const list = [...data.selfEvaluation.pdpDetailed.weaknesses];
+                                        list[wIdx].activities[actIdx].habitTable[hIdx].time = v;
+                                        updateField('selfEvaluation.pdpDetailed.weaknesses', list);
+                                      }} />
+                                    </td>
+                                  </tr>
+                                ))}
+                              </tbody>
+                            </table>
                           </div>
+                        )}
+
+                        {/* 3. Three-Month & One-Year Goals Block (image_54edc9.png) */}
+                        {act.longTermGoals && (
+                          <div className="grid sm:grid-cols-2 gap-4 mt-4">
+                            <div className="bg-slate-950/40 p-4 rounded-xl border border-slate-800">
+                              <span className="text-xs font-black text-amber-500 block mb-2 font-mono uppercase tracking-widest">3-Month Goal</span>
+                              <ul className="space-y-1.5 text-xs text-slate-300">
+                                {act.longTermGoals.threeMonth.map((tm, tmIdx) => (
+                                  <li key={tmIdx} className="flex gap-2">
+                                    <span className="text-slate-500 font-bold shrink-0">-</span>
+                                    <EditableText value={tm} onUpdate={(v) => {
+                                      const list = [...data.selfEvaluation.pdpDetailed.weaknesses];
+                                      list[wIdx].activities[actIdx].longTermGoals.threeMonth[tmIdx] = v;
+                                      updateField('selfEvaluation.pdpDetailed.weaknesses', list);
+                                    }} />
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                            <div className="bg-slate-950/40 p-4 rounded-xl border border-slate-800">
+                              <span className="text-xs font-black text-amber-500 block mb-2 font-mono uppercase tracking-widest">1-Year Goal</span>
+                              <ul className="space-y-1.5 text-xs text-slate-300">
+                                {act.longTermGoals.oneYear.map((oy, oyIdx) => (
+                                  <li key={oyIdx} className="flex gap-2">
+                                    <span className="text-slate-500 font-bold shrink-0">-</span>
+                                    <EditableText value={oy} onUpdate={(v) => {
+                                      const list = [...data.selfEvaluation.pdpDetailed.weaknesses];
+                                      list[wIdx].activities[actIdx].longTermGoals.oneYear[oyIdx] = v;
+                                      updateField('selfEvaluation.pdpDetailed.weaknesses', list);
+                                    }} />
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          </div>
+                        )}
+
+                        {/* 4. Before Every New Project Scoping Block (image_54edc9.png) */}
+                        {act.projectTemplate && (
+                          <div className="mt-4 overflow-x-auto rounded-xl border border-slate-800 bg-slate-950/40 max-w-xl">
+                            <table className="w-full text-left text-xs">
+                              <thead className="bg-slate-950 text-slate-500 border-b border-slate-800">
+                                <tr>
+                                  <th className="px-4 py-2 font-mono">Section</th>
+                                  <th className="px-4 py-2 font-mono">Example</th>
+                                </tr>
+                              </thead>
+                              <tbody className="divide-y divide-slate-800/40">
+                                {act.projectTemplate.map((proj, pIdx) => (
+                                  <tr key={pIdx}>
+                                    <td className="px-4 py-2 text-amber-500 font-semibold font-mono">
+                                      <EditableText value={proj.section} onUpdate={(v) => {
+                                        const list = [...data.selfEvaluation.pdpDetailed.weaknesses];
+                                        list[wIdx].activities[actIdx].projectTemplate[pIdx].section = v;
+                                        updateField('selfEvaluation.pdpDetailed.weaknesses', list);
+                                      }} />
+                                    </td>
+                                    <td className="px-4 py-2 text-slate-300">
+                                      <EditableText value={proj.example} onUpdate={(v) => {
+                                        const list = [...data.selfEvaluation.pdpDetailed.weaknesses];
+                                        list[wIdx].activities[actIdx].projectTemplate[pIdx].example = v;
+                                        updateField('selfEvaluation.pdpDetailed.weaknesses', list);
+                                      }} />
+                                    </td>
+                                  </tr>
+                                ))}
+                              </tbody>
+                            </table>
+                          </div>
+                        )}
+
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Tracking & Success Grid */}
+                <div className="grid md:grid-cols-2 gap-8 pt-4 border-t border-slate-800/50">
+                  {/* Tracking Method Table */}
+                  <div className="space-y-4">
+                    <h4 className="text-xs uppercase tracking-widest font-black text-slate-500 font-mono">Tracking Method</h4>
+                    <div className="overflow-x-auto rounded-xl border border-slate-800 bg-slate-950/40">
+                      <table className="w-full text-left text-xs">
+                        <thead className="bg-slate-950 text-slate-500 border-b border-slate-800">
+                          <tr>
+                            <th className="px-4 py-3 font-mono">Metric</th>
+                            <th className="px-4 py-3 font-mono text-right">Goal</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-slate-800/40">
+                          {weak.tracking.map((track, trackIdx) => (
+                            <tr key={trackIdx}>
+                              <td className="px-4 py-3 text-slate-300">
+                                <EditableText value={track.metric} onUpdate={(v) => {
+                                  const list = [...data.selfEvaluation.pdpDetailed.weaknesses];
+                                  list[wIdx].tracking[trackIdx].metric = v;
+                                  updateField('selfEvaluation.pdpDetailed.weaknesses', list);
+                                }} />
+                              </td>
+                              <td className="px-4 py-3 text-right font-bold text-amber-500 font-mono">
+                                <EditableText value={track.goal} onUpdate={(v) => {
+                                  const list = [...data.selfEvaluation.pdpDetailed.weaknesses];
+                                  list[wIdx].tracking[trackIdx].goal = v;
+                                  updateField('selfEvaluation.pdpDetailed.weaknesses', list);
+                                }} />
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  {/* Success Indicators Checklist */}
+                  <div className="space-y-4">
+                    <h4 className="text-xs uppercase tracking-widest font-black text-slate-500 font-mono">Success Indicators</h4>
+                    <ul className="space-y-3">
+                      {weak.successIndicators.map((ind, indIdx) => (
+                        <li key={indIdx} className="flex items-start gap-3 text-xs select-none">
+                          <button 
+                            onClick={() => toggleWeaknessIndicatorCheck(wIdx, indIdx)}
+                            className="text-emerald-500 hover:scale-110 transition-transform shrink-0 mt-0.5"
+                          >
+                            {ind.completed ? <CheckSquare size={18} className="fill-emerald-500/10" /> : <Square size={18} className="text-slate-600" />}
+                          </button>
+                          <span className={`leading-relaxed ${ind.completed ? 'text-slate-300 line-through decoration-slate-700' : 'text-slate-200'}`}>
+                            <EditableText value={ind.text} onUpdate={(v) => {
+                              const list = [...data.selfEvaluation.pdpDetailed.weaknesses];
+                              list[wIdx].successIndicators[indIdx].text = v;
+                              updateField('selfEvaluation.pdpDetailed.weaknesses', list);
+                            }} />
+                          </span>
                         </li>
                       ))}
                     </ul>
                   </div>
-
-                  {/* Strategic Learning */}
-                  <div className="space-y-2">
-                    <span className="text-[11px] font-black uppercase tracking-widest text-blue-400 flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-blue-400"></span> Strategic Learning
-                    </span>
-                    <ul className="space-y-4 text-sm text-slate-300">
-                      {data.selfEvaluation.pdp.strategicLearning.map((learn, idx) => (
-                        <li key={idx} className="bg-slate-950/40 p-4 rounded-xl border border-slate-800/50 flex flex-col gap-3">
-                          <div className="flex items-start gap-2">
-                            <Compass size={15} className="text-blue-400 shrink-0 mt-0.5" />
-                            <EditableText className="text-slate-300 leading-snug" value={learn.text} onUpdate={(v) => {
-                              const list = [...data.selfEvaluation.pdp.strategicLearning];
-                              list[idx].text = v;
-                              updateField('selfEvaluation.pdp.strategicLearning', list);
-                            }} multiline />
-                          </div>
-                          {/* Interactive Progress Bar */}
-                          <div className="space-y-1.5 pl-6">
-                            <div className="flex justify-between items-center text-[11px] font-mono">
-                              <span className="text-blue-400 font-bold">Progress Rate</span>
-                              <span className="text-slate-300 font-bold">{learn.progress}%</span>
-                            </div>
-                            <div className="w-full bg-slate-900 h-2.5 rounded-full overflow-hidden border border-slate-800/40">
-                              <div 
-                                className="bg-gradient-to-r from-blue-600 to-blue-400 h-full rounded-full transition-all duration-500 shadow-[0_0_8px_rgba(59,130,246,0.5)]" 
-                                style={{ width: `${learn.progress}%` }}
-                              />
-                            </div>
-                            {isEditMode && (
-                              <div className="flex items-center gap-2 pt-1">
-                                <input 
-                                  type="range" 
-                                  min="0" 
-                                  max="100" 
-                                  value={learn.progress} 
-                                  onChange={(e) => {
-                                    const list = [...data.selfEvaluation.pdp.strategicLearning];
-                                    list[idx].progress = parseInt(e.target.value);
-                                    updateField('selfEvaluation.pdp.strategicLearning', list);
-                                  }}
-                                  className="w-full accent-blue-500 cursor-pointer h-1.5 bg-slate-800 rounded-lg appearance-none"
-                                />
-                              </div>
-                            )}
-                          </div>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Tracking */}
-                  <div className="space-y-2">
-                    <span className="text-[11px] font-black uppercase tracking-widest text-fuchsia-400 flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-fuchsia-400"></span> Progress Tracking
-                    </span>
-                    <ul className="space-y-4 text-sm text-slate-300">
-                      {data.selfEvaluation.pdp.tracking.map((track, idx) => (
-                        <li key={idx} className="bg-slate-950/40 p-4 rounded-xl border border-slate-800/50 flex flex-col gap-3">
-                          <div className="flex items-start gap-2">
-                            <LineChart size={15} className="text-fuchsia-400 shrink-0 mt-0.5" />
-                            <EditableText className="text-slate-300 leading-snug" value={track.text} onUpdate={(v) => {
-                              const list = [...data.selfEvaluation.pdp.tracking];
-                              list[idx].text = v;
-                              updateField('selfEvaluation.pdp.tracking', list);
-                            }} multiline />
-                          </div>
-                          {/* Interactive Progress Bar */}
-                          <div className="space-y-1.5 pl-6">
-                            <div className="flex justify-between items-center text-[11px] font-mono">
-                              <span className="text-fuchsia-400 font-bold">Progress Rate</span>
-                              <span className="text-slate-300 font-bold">{track.progress}%</span>
-                            </div>
-                            <div className="w-full bg-slate-900 h-2.5 rounded-full overflow-hidden border border-slate-800/40">
-                              <div 
-                                className="bg-gradient-to-r from-fuchsia-600 to-fuchsia-400 h-full rounded-full transition-all duration-500 shadow-[0_0_8px_rgba(217,70,239,0.5)]" 
-                                style={{ width: `${track.progress}%` }}
-                              />
-                            </div>
-                            {isEditMode && (
-                              <div className="flex items-center gap-2 pt-1">
-                                <input 
-                                  type="range" 
-                                  min="0" 
-                                  max="100" 
-                                  value={track.progress} 
-                                  onChange={(e) => {
-                                    const list = [...data.selfEvaluation.pdp.tracking];
-                                    list[idx].progress = parseInt(e.target.value);
-                                    updateField('selfEvaluation.pdp.tracking', list);
-                                  }}
-                                  className="w-full accent-fuchsia-500 cursor-pointer h-1.5 bg-slate-800 rounded-lg appearance-none"
-                                />
-                              </div>
-                            )}
-                          </div>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </section>
 
@@ -974,12 +1523,12 @@ const App = () => {
           
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-slate-900 border border-slate-800 p-10 rounded-[2.5rem] shadow-2xl group">
-              <h3 className="text-xl font-bold text-blue-400 mb-8 flex items-center gap-2">
+              <h3 className="text-xl font-bold text-indigo-400 mb-8 flex items-center gap-2">
                 <Code size={20} /> Hard Skills
               </h3>
               <div className="flex flex-wrap gap-3">
                 {data.skills.hard.map((skill, idx) => (
-                  <div key={idx} className="px-5 py-2.5 bg-slate-950 border border-slate-800 rounded-2xl text-sm font-semibold hover:border-blue-500 transition-all">
+                  <div key={idx} className="px-5 py-2.5 bg-slate-950 border border-slate-800 rounded-2xl text-sm font-semibold hover:border-indigo-500 transition-all">
                     <EditableText value={skill} onUpdate={(v) => {
                       const newList = [...data.skills.hard]; newList[idx] = v; updateField('skills.hard', newList);
                     }} />
@@ -1007,7 +1556,7 @@ const App = () => {
 
         {/* Strategic Roadmap */}
         <section id="roadmap" className="bg-slate-900 border border-slate-800 p-16 rounded-[4rem] relative overflow-hidden shadow-2xl scroll-mt-24">
-          <div className="absolute top-0 right-0 p-16 text-blue-500/5 -rotate-12 pointer-events-none">
+          <div className="absolute top-0 right-0 p-16 text-indigo-500/5 -rotate-12 pointer-events-none">
             <Map size={320} />
           </div>
           <div className="relative z-10">
@@ -1015,9 +1564,9 @@ const App = () => {
             <div className="grid md:grid-cols-2 gap-16">
               {data.roadmap.map((step, idx) => (
                 <div key={idx} className="flex gap-8 group">
-                  <div className="text-6xl font-black text-slate-800 group-hover:text-blue-500/40 transition-colors">0{idx + 1}</div>
+                  <div className="text-6xl font-black text-slate-800 group-hover:text-indigo-500/40 transition-colors">0{idx + 1}</div>
                   <div className="pt-2">
-                    <EditableText className="block text-blue-500 font-black uppercase tracking-widest text-xs mb-3" value={step.phase} onUpdate={(v) => {
+                    <EditableText className="block text-indigo-500 font-black uppercase tracking-widest text-xs mb-3" value={step.phase} onUpdate={(v) => {
                       const newList = [...data.roadmap]; newList[idx].phase = v; setData({...data, roadmap: newList});
                     }} />
                     <EditableText className="text-2xl font-semibold text-white leading-tight" value={step.goal} onUpdate={(v) => {
