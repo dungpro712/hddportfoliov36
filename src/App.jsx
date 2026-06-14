@@ -1,10 +1,40 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  User, BookOpen, Users, Brain, Briefcase, Trophy, Map, 
-  Cpu, MessageSquare, Code, Menu, X, ChevronDown, ChevronUp, Bot, Image as ImageIcon,
-  Camera, RotateCcw, Lightbulb, CheckCircle2, ListChecks, TrendingUp, AlertCircle,
-  Target, Compass, LineChart, ArrowRight, CheckSquare, Square
-} from 'lucide-react';
+import {
+  User,
+  BookOpen,
+  Users,
+  Brain,
+  Briefcase,
+  Trophy,
+  Map,
+  Cpu,
+  MessageSquare,
+  Code,
+  Menu,
+  X,
+  ChevronDown,
+  ChevronUp,
+  Bot,
+  Image as ImageIcon,
+  Camera,
+  RotateCcw,
+  Lightbulb,
+  CheckCircle2,
+  ListChecks,
+  TrendingUp,
+  AlertCircle,
+  Target,
+  Compass,
+  LineChart,
+  ArrowRight,
+  CheckSquare,
+  Square,
+  Save,
+  Phone,
+  Mail,
+  ExternalLink,
+  SquarePen
+} from "lucide-react";
 
 const initialData = {
   intro: {
@@ -590,9 +620,10 @@ const App = () => {
             </button>
           </>
         ) : (
-          <button onClick={() => setIsEditMode(true)} className="flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-xl shadow-lg hover:bg-indigo-700 transition-all font-bold">
-            <Edit3 size={20} /> Edit Portfolio
-          </button>
+          <button onClick={() => setIsEditMode(true)}
+  className="flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-xl shadow-lg hover:bg-indigo-700 transition-all font-bold">
+  Edit Portfolio
+</button>
         )}
       </div>
 
@@ -629,7 +660,7 @@ const App = () => {
         <div className="max-w-xl mx-auto bg-slate-900/40 border border-slate-800/80 rounded-3xl p-6 flex flex-col md:flex-row items-center justify-between gap-6 backdrop-blur-sm group">
           <div className="flex flex-col items-start gap-4">
             <div className="flex items-center gap-3 text-sm text-slate-300 hover:text-indigo-400 transition-colors">
-              <Github size={18} className="text-slate-500" />
+              <ExternalLink size={18} className="text-slate-500" />
               <EditableText value={data.intro.contact.github} onUpdate={(v) => updateField('intro.contact.github', v)} />
             </div>
             <div className="flex items-center gap-3 text-sm text-slate-300 hover:text-indigo-400 transition-colors">
