@@ -853,7 +853,7 @@ const App = () => {
                 <span className="w-2.5 h-7 bg-indigo-600 rounded-full block"></span>
                 Self-Evaluation & SWOT Matrix
               </h2>
-              <p className="text-slate-500 text-sm mt-1">Analyzing team behavior dynamics (referenced in image_18a53b.jpg) and core engineering competency structures.</p>
+             
             </div>
             <button 
               onClick={() => setPanels({ innovator: true, istp: true, director: true })}
